@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2e5ed9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #131d38;
+}
+
+body {
+    color: #131d38;
+    background-color: #fff;
+    font-family: "Inter", "Space Grotesk", "Times New Roman", sans-serif;
+}
+
+main {
+    padding: 0 100px;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #fff;
+    color: #131d38;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav #collapse {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li:not(:last-child) {
+    margin-right: 10px;
+}
+
+nav li a {
+    font-weight: bold;
+    transition: border-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+nav li a:hover {
+    border-bottom: 3px solid #131d38;
+}
+
+nav .border {
+    display: none;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media a {
+    display: flex;
+    width: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media a:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-media img:hover {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(207deg) brightness(100%) contrast(97%);
+}
+
+#hero-section {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-text {
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+}
+
+#biodata {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#biodata p {
+    font-size: larger;
+    font-weight: 500;
+}
+
+#biodata h4 {
+    color: #2e5ed9;
+}
+
+.biodata-item {
+    width: 100%;
+}
+
+#biodata-left .biodata-content:not(:last-child),
+#biodata-right .biodata-content:not(:last-child) {
+    padding-bottom: 50px;
+}
+
+.underline {
+    color: #2e5ed9;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.underline:hover {
+    font-weight: 500;
+}
+
+#biodata-right {
+    align-items: flex-end;
+    text-align: end;
+}
+
+#biodata-right h1 {
+    font-size: 2.8em;
+}
+
+#biodata #profile-img {
+    flex-grow: 1;
+}
+
+#profile-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#avatar {
+    position: relative;
+    display: flex;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+#avatar-circle {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border: 2px dashed #2e5ed9;
+    border-radius: 50%;
+    animation: spin 10s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+#avatar img {
+    width: 100%;
+    height: 100%;
+    background-color: #131d38;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 60%;
+    overflow: hidden;
+}
+
+.border div {
+    border-top: 2px solid #131d38;
+}
+
+#skills {
+    display: flex;
+    height: fit-content;
+    padding: 100px 0;
+    align-items: center;
+}
+
+#content {
+    flex-basis: 80%;
+}
+
+#skills aside {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    flex-basis: 20%;
+    align-items: flex-end;
+}
+
+.card {
+    flex: 1 1 30%;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #131d38;
+    overflow: hidden;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card:hover {
+    background-color: #2e5ed9;
+    color: #fff;
+}
+
+#skills .card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover .card-img {
+    filter: brightness(0) invert(1);
+}
+
+.card-img {
+    width: 100%;
+    height: 140px;
+}
+
+.card-img img {
+    height: 100%;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.card:not(:last-child) {
+    margin-right: 20px;
+}
+
+#skills aside article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+}
+
+.software {
+    display: flex;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.software:not(:last-child) {
+    padding-bottom: 20px;
+}
+
+.software img {
+    margin-left: 10px;
+    width: 24px;
+}
+
+.software:hover {
+    font-weight: bold;
+    transform: scale(1.2);
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#projects img {
+    width: 100%;
+}
+
+#projects .card img {
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#projects .card:hover {
+    background-color: unset;
+}
+
+#projects .card:hover img {
+    transform: scale(1.2);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 50px 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#menu-mobile {
+    display: none;
+    width: 24px;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@media (max-width: 992px) {
+    #biodata {
+        position: relative;
+        flex-direction: column;
+    }
+    #biodata-left .biodata-content:not(:last-child),
+    #biodata-right .biodata-content:not(:last-child) {
+        padding-bottom: 20px;
+    }
+    #avatar {
+        margin-bottom: 50px;
+    }
+    #biodata-right {
+        position: absolute;
+        bottom: 0;
+    }
+    #biodata-left {
+        order: 1;
+    }
+    #skills {
+        flex-direction: column;
+    }
+    #content {
+        padding-bottom: 50px;
+    }
+    #content h1 {
+        text-align: center;
+    }
+    #skills aside {
+        align-items: center;
+    }
+    #skills aside article {
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-align: start;
+    }
+    .software {
+        flex: 1 1 30%;
+        justify-content: center;
+    }
+    .software img {
+        order: -1;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    #skills .card-container .card {
+        flex: 1 1 45%;
+    }
+    #skills .card:not(:last-child) {
+        margin-right: 0px;
+    }
+    #skills .card:first-child {
+        margin-right: 20px;
+    }
+    #skills .card:last-child {
+        margin-top: 20px;
+    }
+    #projects .card {
+        flex: 1 1 100%;
+    }
+    #projects .card {
+        padding: 10px;
+    }
+    #projects .card:not(:last-child) {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    main,
+    nav,
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #menu-mobile {
+        display: block;
+        cursor: pointer;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav #collapse {
+        flex-direction: column;
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul li:not(:last-child) {
+        padding-bottom: 10px;
+    }
+    nav .border {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+    }
+    .social-media {
+        align-items: center;
+        justify-content: center;
+    }
+    #biodata-right {
+        display: flex;
+        flex-direction: row;
+        order: 2;
+        position: static;
+        text-align: center;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    #biodata-left {
+        padding-bottom: 50px;
+    }
+    #biodata-left .biodata-content {
+        text-align: center;
+    }
+    #biodata-right .biodata-content:not(:last-child) {
+        padding-bottom: 0px;
+        padding-right: 20px;
+    }
+    #avatar {
+        width: 300px;
+        height: 300px;
+    }
+    #avatar-circle {
+        width: 300px;
+        height: 300px;
+    }
+    #skills .card-container .card {
+        flex: 1 1 100%;
+    }
+    #skills .card:first-child {
+        margin-right: 0px;
+    }
+    #skills .card:not(:first-child) {
+        margin-top: 20px;
+    }
+    .software {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+}
